@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- login.component.html -->
+<ion-content [fullscreen]="true">
+  <div class="center-container">
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+    </form>
+
+    <ion-button expand="full" (click)="continueAsGuest()">Continuar como invitado</ion-button>
+  </div>
+</ion-content>
