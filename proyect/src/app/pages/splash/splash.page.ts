@@ -13,6 +13,6 @@ export class SplashPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.router.navigate(['/login']); // Redirige a la página de inicio de sesión
-    }, 3000); // Espera 5 segundos (5000 milisegundos) antes de redirigir
+    }, 3000); // Espera 3 segundos (3000 milisegundos) antes de redirigir
   }
 }
