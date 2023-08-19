@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'nosotros',
     loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
+  {
+    path: 'forget',
+    loadChildren: () => import('./pages/forget/forget.module').then( m => m.ForgetPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({

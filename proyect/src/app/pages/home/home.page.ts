@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as L from 'leaflet';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,23 +8,15 @@ import * as L from 'leaflet';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ionViewDidEnter() {
-    this.initializeMap();
+  irConductor() {
+    this.router.navigate(['/conductor']); // Cambia 'conductor' por la ruta de la página de conductor
   }
 
-  initializeMap() {
-    const map = L.map('map').setView([-33.592459, -70.573856], 15);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-    }).addTo(map);
-
-    L.marker([-33.592459, -70.573856])
-      .addTo(map)
-      .bindPopup('Sede Duoc UC Puente Alto, Chile')
-      .openPopup();
+  irPasajero() {
+    this.router.navigate(['/pasajero']); // Cambia 'pasajero' por la ruta de la página de pasajero
   }
+
 }
 
