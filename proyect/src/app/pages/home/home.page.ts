@@ -18,5 +18,15 @@ export class HomePage {
     this.router.navigate(['/pasajero']); // Cambia 'pasajero' por la ruta de la página de pasajero
   }
 
+  navigateToFeature(feature: string) {
+    // Agrega lógica para manejar la navegación a características adicionales
+    if (feature === 'feature1') {
+      // Navegar a la página de la característica 1
+    } else if (feature === 'feature2') {
+      // Navegar a la página de la característica 2
+    }
+    // Agrega más casos según sea necesario
+  }
+
 }
 

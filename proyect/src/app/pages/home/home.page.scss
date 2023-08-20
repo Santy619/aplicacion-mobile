@@ -56,3 +56,20 @@ ion-content {
     color: #666; // Cambia el color según tu diseño
   }
 }
+
+.additional-content {
+  margin-top: 30px;
+
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  ion-item {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+  }
+}
