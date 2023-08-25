@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -6,13 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage {
-  username: string = ''; // Inicializa estas propiedades
-  email: string = '';
-  password: string = '';
+  constructor(private authService: AuthService) {}
 
-  constructor() {}
-
-  onSubmit() {
-    // Implementa la lógica para el registro de usuario aquí
+  register(email: string, password: string): void {
+    if (this.authService.register(email, password)) {
+      // Usuario registrado exitosamente, redirige a la página de inicio o realiza otra acción
+    } else {
+      // Mostrar mensaje de error de registro
+    }
   }
 }
