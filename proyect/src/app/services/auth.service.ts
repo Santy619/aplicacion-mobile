@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthService {
-  constructor() {}
+   @Injectable({
+     providedIn: 'root'
+   })
+   export class AuthService {
+     private users: any[] = [];
 
-  register(email: string, password: string): boolean {
-    // Implementa el registro y guarda el estado de autenticación en LocalStorage
-  }
+     constructor() {
+       const savedUsers = localStorage.getItem('users');
+       if (savedUsers) {
+         this.users = JSON.parse(savedUsers);
+       }
+     }
 
-  login(email: string, password: string): boolean {
-    // Implementa el inicio de sesión y guarda el estado de autenticación en LocalStorage
-  }
+     register(username: string, email: string, password: string): void {
+       this.users.push({ username, email, password });
+       localStorage.setItem('users', JSON.stringify(this.users));
+     }
 
-  logout(): void {
-    // Implementa el cierre de sesión y elimina el estado de autenticación de LocalStorage
-  }
-
-  isAuthenticated(): boolean {
-    // Verifica si el usuario está autenticado basado en la información almacenada en LocalStorage
-  }
-}
+     login(email: string, password: string): boolean {
+       const user = this.users.find(u => u.email === email && u.password === password);
+       return !!user;
+     }
+   }
