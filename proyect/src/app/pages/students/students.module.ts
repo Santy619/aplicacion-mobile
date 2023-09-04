@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { StudentsPageRoutingModule } from './students-routing.module';
 
 import { StudentsPage } from './students.page';
+import { ChatComponent } from 'src/app/components/chat/chat.component'; // Ajusta la ruta según tu estructura de carpetas
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { StudentsPage } from './students.page';
     IonicModule,
     StudentsPageRoutingModule
   ],
-  declarations: [StudentsPage]
+  declarations: [StudentsPage,ChatComponent]
 })
 export class StudentsPageModule {}

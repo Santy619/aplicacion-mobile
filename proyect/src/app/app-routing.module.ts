@@ -31,6 +31,23 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'students',
+    loadChildren: () => import('./pages/students/students.module').then(m => m.StudentsPageModule)
+  },
+  {
+    path: 'bandeja-chat',
+    loadChildren: () => import('./pages/bandeja-chat/bandeja-chat.module').then( m => m.BandejaChatPageModule)
+  },
+  {
+    path: 'chat-individual/:contacto',
+    loadChildren: () => import('./pages/chat-individual/chat-individual.module').then( m => m.ChatIndividualPageModule)
+  },
+  
 ];
 
 @NgModule({

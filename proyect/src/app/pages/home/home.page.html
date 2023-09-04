@@ -28,11 +28,16 @@
     </ion-row>
     <ion-row>
       <ion-col size="12">
-        <ion-img src="../assets/img/student.png" (click)="irPasajero()" style="cursor: pointer;"></ion-img>
+        <ion-img src="../assets/img/student.png" (click)="irStudents()" style="cursor: pointer;"></ion-img>
         <p>Busca un conductor para tu viaje asi no se te va la micro</p>
-        <ion-button expand="full" (click)="irPasajero()" class="option-button">
+        <ion-button expand="full" (click)="irStudents()" class="option-button">
           Soy Pasajero
         </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="../assets/img/chat.png" (click)="irAChat()"style="cursor: pointer;"></ion-img>
+        <p>Chat</p>
+        
       </ion-col>
     </ion-row>
   </ion-grid>

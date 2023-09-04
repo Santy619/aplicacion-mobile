@@ -14,10 +14,13 @@ export class HomePage {
     this.router.navigate(['/conductor']); // Cambia 'conductor' por la ruta de la página de conductor
   }
 
-  irPasajero() {
-    this.router.navigate(['/pasajero']); // Cambia 'pasajero' por la ruta de la página de pasajero
+  irStudents() {
+    this.router.navigate(['/students']); // Navega a la página de students
   }
-
+  irAChat() {
+    console.log('Navegando a la página de chat');
+    this.router.navigate(['/chat']); // Navega a la página de chat
+  }
   navigateToFeature(feature: string) {
     // Agrega lógica para manejar la navegación a características adicionales
     if (feature === 'feature1') {
