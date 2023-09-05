@@ -11,7 +11,7 @@ export class HomePage {
   constructor(private router: Router) {}
 
   irConductor() {
-    this.router.navigate(['/conductor']); // Cambia 'conductor' por la ruta de la página de conductor
+    this.router.navigate(['/drivers']); // Cambia 'conductor' por la ruta de la página de conductor
   }
 
   irStudents() {

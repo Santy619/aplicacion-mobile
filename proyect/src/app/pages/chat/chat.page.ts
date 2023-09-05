@@ -20,10 +20,10 @@ export class ChatPage implements OnInit {
   mensajes: { [nombreContacto: string]: Mensaje[] } = {};
   contactoSeleccionado: Contacto | any;
   listaDeContactos: Contacto[] = [
-    { nombre: 'Ricky', avatar: 'URL_DEL_AVATAR_1' },
-    { nombre: 'Jarvis', avatar: 'URL_DEL_AVATAR_2' },
-    { nombre: 'Diosito', avatar: 'URL_DEL_AVATAR_3' },
-    { nombre: 'Messi', avatar: 'URL_DEL_AVATAR_3' },
+    { nombre: 'Ricky', avatar: "../assets/img/ricky.jpg" },
+    { nombre: 'Jarvis', avatar: "../assets/img/jarvis.jpg" },
+    { nombre: 'Diosito', avatar: "../assets/img/diosito.jpg" },
+    { nombre: 'Messi', avatar: "../assets/img/messi.webp" },
     // Agrega más contactos según sea necesario
   ];
 
